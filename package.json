@@ -1,0 +1,17 @@
+{
+  "name": "sqlcipher-electron-demo",
+  "main": "main.js",
+  "scripts": {
+    "postinstall": "npm run rebuild",
+    "rebuild": "electron-rebuild && npm run sqlcipher",
+    "sqlcipher": "cd node_modules/cross-sqlcipher && npm i --runtime=electron --target=1.8.4 --dist-url=https://atom.io/download/electron",
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "=1.8.4",
+    "electron-rebuild": "^1.7.3"
+  },
+  "dependencies": {
+    "cross-sqlcipher": "0.0.2"
+  }
+}
